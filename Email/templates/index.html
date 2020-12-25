@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emay Sysstem</title>
+</head>
+<style>
+    header {
+        height: 50px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: black;
+        color: white;
+    }
+    
+    .content {
+        margin: 0px auto;
+        padding: 0px auto;
+        align-items: center;
+        height: 300px;
+        width: 400px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background-color: gray;
+        margin-top: 20px;
+    }
+    
+    .content .form {
+        margin-top: 20px;
+    }
+    
+    .content .form #textarea {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <header>
+        <center>
+            <h1>Email System</h1>
+        </center>
+    </header>
+    <div class="content">
+        <form method="POST" class="form">
+            {% csrf_token %}
+            <label>Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input name="Email" type="email"><br>
+            <label>Message :</label>
+            <textarea name="Message" id='textarea' rows="4" cols="30"></textarea><br>
+            <br><br>
+            <center><button type="submit">Send mail</button></center>
+        </form>
+    </div>
+
+</body>
+
+</html>
